@@ -1,0 +1,26 @@
+{% extends "forms/field.html.twig" %}
+
+{% block field %}
+{% set value = evaluate(field.condition) %}
+{% set value = value == 'true' ? 1 : value %}
+{% set value = value == 'false' ? 0 : value %}
+
+{% if value %}
+    {% if field.classes %}
+    <div class="{{ field.classes }}">
+    {% endif %}
+
+    {% if field.fields %}
+        {% for child in field.fields %}
+            {% if child.type %}
+                {% set value = data.value(child.name) %}
+                {% include ["forms/fields/#{child.type}/#{child.type}.html.twig", 'forms/fields/text/text.html.twig'] with {field: child} %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% if field.classes %}
+    </div>
+    {% endif %}
+{% endif %}
+{% endblock %}
