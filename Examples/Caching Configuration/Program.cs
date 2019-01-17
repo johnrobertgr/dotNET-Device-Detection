@@ -21,31 +21,6 @@
  * defined by the Mozilla Public License, v. 2.0.
  * ********************************************************************* */
 
-/*
-<tutorial>
-Find profiles example of using 51Degrees device detection. 
-The example shows how to:
-<ol>
-<li>Use the DataSetBuilder to create a 51Degrees data set that will use a
-custom caching configuration.
-<p><pre class="prettyprint lang-cs">
-string fileName = args[0];
-DataSet dataSet = DataSetBuilder.File()                
-                .ConfigureCachesFromTemplate(
-                    DataSetBuilder.CacheTemplate.SingleThreadLowMemory)
-                .SetCacheBuilder(CacheType.SignaturesCache, new CustomCacheBuilder())
-                .SetCacheBuilder(CacheType.ProfilesCache, null)
-                .SetTempFile(false)
-                .Build(fileName)
-</pre></p>
-</ol>
-This tutorial assumes you are building this from within the
-51Degrees Visual Studio solution. Running the executable produced
-inside Visual Studio will ensure all the command line arguments
-are preset correctly. If you are running outside of Visual Studio,
-make sure to add the path to a 51Degrees data file as an argument.
-</tutorial>
-*/
 using System;
 using FiftyOne.Foundation.Mobile.Detection;
 using FiftyOne.Foundation.Mobile.Detection.Entities;
