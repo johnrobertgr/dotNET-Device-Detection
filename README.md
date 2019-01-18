@@ -64,6 +64,6 @@ Data files which are updated weekly and daily, automatically, and with more prop
 * Temporary files are now created in the App_Data/51Degrees folder of the web application rather than a UNC path or the master data file folder.
 * Values associated with Profiles are now retrieved using a more efficient algorithm.
 * DataSet.Properties collection now has a string accesser to make retrieving properties by name simpler.
-* Web sites using memory mode use a byte array to improve start up time.
+* Websites using memory mode use a byte array to improve start up time.
 * Version 3.2 data file formats are supported in parallel with version 3.1 data files.
 * 51Degrees unit tests are now part of the open source distribution.

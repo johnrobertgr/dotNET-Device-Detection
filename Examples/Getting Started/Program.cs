@@ -21,37 +21,6 @@
  * defined by the Mozilla Public License, v. 2.0.
  */
 
-/*
-<tutorial>
-Getting started example of using 51Degrees device detection. 
-The example shows how to:
-<ol>
-<li>Set the data set for the 51Degrees detector
-<p><pre class="prettyprint lang-cs">
-string fileName = args[0];
-DataSet dataSet = StreamFactory.Create(fileName, false);
-</pre></p>
-<li>Instantiate the 51Degrees device detection provider
-with these settings
-<p><pre class="prettyprint lang-cs">
-Provider provider = new Provider(dataSet);
-</pre></p>
-<li>Produce a match for a single HTTP User-Agent
-<p><pre class="prettyprint lang-cs">
-match = provider.Match(userAgent);
-</pre></p>
-<li>Extract the value of the IsMobile property
-<p><pre class="prettyprint lang-cs">
-IsMobile = match["IsMobile"].ToString();
-</pre></p>
-</ol>
-This tutorial assumes you are building this from within the
-51Degrees Visual Studio solution. Running the executable produced
-inside Visual Studio will ensure all the command line arguments
-are preset correctly. If you are running outside of Visual Studio,
-make sure to add the path to a 51Degrees data file as an argument.
-</tutorial>
-*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
