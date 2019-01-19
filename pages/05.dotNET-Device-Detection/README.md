@@ -10,7 +10,7 @@
 Request.Browser["IsMobile"]
 ```
 
-Or 
+Or
 
 ```cs
 Request.Browser["IsTablet"]
